@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'pretendard';
+    src: url(source/PretendardVariable.woff2);
+}
+
+html, body {
+    font-family: 'pretendard';
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background-color: cadetblue;
+    font-size: 2em;
+    padding: 2em 1em 1em;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1em;
+    padding: 0.4em 1em;
+    margin: 0;
+}
+
+p {
+    padding: 0 0.4em;
+    margin: 0;
+}
+
+main {
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.section {
+    border: black solid 2px;
+    box-sizing: border-box;
+    padding: 2em 0;
+}
+
+nav {
+    width: 40vw;
+    padding: 0 30vw;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+.sectionheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    margin: 0 auto;
+}
+
+.row {
+    background-color: aliceblue;
+    padding: 1em 2em;
+    margin: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
