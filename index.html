@@ -1,61 +1,126 @@
 <html>
     <head>
-        <link href="common.css" rel="stylesheet">
-        <link href="translator.css" rel="stylesheet">
+        <link href="common.css" rel="stylesheet" media="(orientation: landscape)">
+        <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <nav>
-            <div class="navcontentbox">
-                <img src="source/icon/home.svg">
-                <h4>Home</h4>
-            </div>
-            <div class="navcontentbox">
-                <img src="source/icon/people.svg">
-                <h4>Admins</h4>
-            </div>
-        </nav>
+        <script>
+            const langResource = {
+                ko : {
+                    from: '영어 및 스페인어',
+                    startline1: '¡Hola patitos!',
+                    startline2: 'We are Quackity Korean Translator.',
+                    startline3: 'Mucho gusto.',
+                    startline4: 'Meet our team on this page!',
+                    to: '한국어',
+                    endline1: '안녕하세요 키티탐라 여러분!',
+                    endline2: '저희는 콰키티 한국어 번역기입니다.',
+                    endline3: '만나서 반가워요.',
+                    endline4: '이 페이지에서 저희 팀을 만나보세요!'
+                },
+                en : {
+                    from: 'Korean',
+                    startline1: '안녕하세요 키티탐라 여러분!',
+                    startline2: '저희는 콰키티 한국어 번역기입니다.',
+                    startline3: '만나서 반가워요.',
+                    startline4: '이 페이지에서 저희 팀을 만나보세요!',
+                    to: 'English',
+                    endline1: 'Hello ducklings!',
+                    endline2: 'We are Quackity Korean Translator.',
+                    endline3: 'Nice to meet you.',
+                    endline4: 'Meet our team on this page!'
+                },
+                es : {
+                    from: 'Coreano',
+                    startline1: '안녕하세요 키티탐라 여러분!',
+                    startline2: '저희는 콰키티 한국어 번역기입니다.',
+                    startline3: '만나서 반가워요.',
+                    startline4: '이 페이지에서 저희 팀을 만나보세요!',
+                    to: 'Español',
+                    endline1: '¡Hola patitos!',
+                    endline2: 'Somos traductor coreano de Quackity.',
+                    endline3: 'Mucho gusto.',
+                    endline4: '¡Conoce a nuestro equipo en esta página!'
+                }
+            }
+        </script>
+
         <main>
             <div class="section">
                 <div class="sectionheader">
                     <h1>콰키티 한국어 번역기</h1>
-                    <div class="row">
-                        <button>한국어</button>
-                        <button>English</button>
-                        <button>Español</button>
+                    <div class="languageSelector">
+                        <label for="languageSelector"><img src="source/icon/language.svg">Language:</label>
+                        <select id="languageSelector">
+                            <option value="ko" selected>한국어</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
                     </div>
                 </div>
                 <div class="translator">
                     <div class="translator-row">
                         <div class="tr-head">
-                            <div class="korean">
-                                <h4>영어 및 스페인어</h4>
-                            </div>
-                            <div class="english">
-                                <h4>Korean</h4>
-                            </div>
-                            <div class="spanish">
-                                <h4>Coreano</h4>
-                            </div>
+                            <h4 id="from"></h4>
                         </div>
                         <img src="source/icon/change.svg">
                         <div class="tr-head">
-                            <div class="korean">
-                                <h4>한국어</h4>
-                            </div>
-                            <div class="english">
-                                <h4>English</h4>
-                            </div>
-                            <div class="spanish">
-                                <h4>Español</h4>
-                            </div>
+                            <h4 id="to"></h4>
+                        </div>
+                    </div>
+                    <div class="translator-row">
+                        <div class="tr-td">
+                            <p id="startline1"></p>
+                            <p id="startline2"></p>
+                            <p id="startline3"></p>
+                            <p id="startline4"></p>
+                        </div>
+                        <img src="source/icon/space.svg">
+                        <div class="tr-td">
+                            <p id="endline1"></p>
+                            <p id="endline2"></p>
+                            <p id="endline3"></p>
+                            <p id="endline4"></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <nav>
+                <a href="#"><div class="navcontentbox">
+                    <img src="source/icon/home.svg">
+                    <h4>Home</h4>
+                </div></a>
+                <a href="admin.html"><div class="navcontentbox">
+                    <img src="source/icon/admin.svg">
+                    <h4>Admins</h4>
+                </div></a>
+                <a href="faq.html"><div class="navcontentbox">
+                    <img src="source/icon/question.svg">
+                    <h4>FAQ</h4>
+                </div></a>
+            </nav>
         </main>
 
         <script>
-            
+            window.addEventListener('load', function(){
+                document.getElementById('languageSelector').value = 'ko';
+                updatelanguage('ko');
+
+                document.getElementById('languageSelector').addEventListener('change', function() {
+                    const selectedLang = this.value;
+                    updatelanguage(selectedLang);
+                });
+            });
+
+            function updatelanguage(lang) {
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang] [key];
+                    }
+                }
+            }
         </script>
     </body>
 </html>

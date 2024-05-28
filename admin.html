@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <link href="common.css" rel="stylesheet" media="(orientation: landscape)">
+        <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            const langResource = {
+                ko : {
+                    pronouns: '대명사',
+                    pronounss: '대명사',
+                    nabi_pronouns: 'She/Her | Ella/-a',
+                    eneciel_pronouns: 'They/Them',
+                    nativelang: '모국어',
+                    nativelangg: '모국어',
+                    nabi_lang: '스페인어',
+                    eneciel_lang: '한국어',
+                    timezone: '표준시',
+                    timezonee: '표준시',
+                    nabi_time: 'EST',
+                    eneciel_time: 'KST'
+                },
+                en : {
+                    pronouns: 'Pronouns',
+                    pronounss: 'Pronouns',
+                    nabi_pronouns: 'She/Her',
+                    eneciel_pronouns: 'They/Them',
+                    nativelang: 'Native Language',
+                    nativelangg: 'Native Language',
+                    nabi_lang: 'Spanish',
+                    eneciel_lang: 'Korean',
+                    timezone: 'Timezone',
+                    timezonee: 'Timezone',
+                    nabi_time: 'EST',
+                    eneciel_time: 'KST'
+                },
+                es : {
+                    pronouns: 'Pronombres',
+                    pronounss: 'Pronombres',
+                    nabi_pronouns: 'Ella/-a',
+                    eneciel_pronouns: 'Elle/-e',
+                    nativelang: 'Lengua materna',
+                    nativelangg: 'Lengua materna',
+                    nabi_lang: 'Español',
+                    eneciel_lang: 'Coreano',
+                    timezone: 'Zona Horaria',
+                    timezonee: 'Zona Horaria',
+                    nabi_time: 'EST',
+                    eneciel_time: 'KST'
+                }
+            }
+        </script>
+
+        <main>
+            <div class="section">
+                <div class="sectionheader">
+                    <h1>콰키티 한국어 번역기</h1>
+                    <div class="languageSelector">
+                        <label for="languageSelector"><img src="source/icon/language.svg">Language:</label>
+                        <select id="languageSelector">
+                            <option value="ko" selected>한국어</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="adminsection">
+                    <div class="admin">
+                        <div class="admin-header"><h3>Nabi</h3></div>
+                        <div class="admin-context">
+                            <div class="admin-row">
+                                <h4 id="pronouns"></h4>
+                                <p id="nabi_pronouns"></p>
+                            </div>
+                            <div class="admin-row">
+                                <h4 id="nativelang"></h4>
+                                <p id="nabi_lang"></p>
+                            </div>
+                            <div class="admin-row">
+                                <h4 id="timezone"></h4>
+                                <p id="nabi_time"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admin">
+                        <div class="admin-header"><h3>Eneciel</h3></div>
+                        <div class="admin-context">
+                            <div class="admin-row">
+                                <h4 id="pronounss"></h4>
+                                <p id="eneciel_pronouns"></p>
+                            </div>
+                            <div class="admin-row">
+                                <h4 id="nativelangg"></h4>
+                                <p id="eneciel_lang"></p>
+                            </div>
+                            <div class="admin-row">
+                                <h4 id="timezonee"></h4>
+                                <p id="eneciel_time"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html"><div class="navcontentbox">
+                    <img src="source/icon/home.svg">
+                    <h4>Home</h4>
+                </div></a>
+                <a href="admin.html"><div class="navcontentbox">
+                    <img src="source/icon/admin.svg">
+                    <h4>Admins</h4>
+                </div></a>
+                <a href="faq.html"><div class="navcontentbox">
+                    <img src="source/icon/question.svg">
+                    <h4>FAQ</h4>
+                </div></a>
+            </nav>
+        </main>
+
+        <script>
+            window.addEventListener('load', function(){
+                document.getElementById('languageSelector').value = 'ko';
+                updatelanguage('ko');
+
+                document.getElementById('languageSelector').addEventListener('change', function() {
+                    const selectedLang = this.value;
+                    updatelanguage(selectedLang);
+                });
+            });
+
+            function updatelanguage(lang) {
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang] [key];
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -11,23 +11,24 @@ html, body {
 
 h1 {
     font-size: 2em;
-    padding: 2em 1em 1em;
+    padding: 0;
     margin: 0;
 }
 
 h3 {
-    font-size: 1.125em;
-    padding: 0.4em 1em;
-    margin: 0;
-}
-
-h4 {
     font-size: 1em;
     padding: 0.4em 1em;
     margin: 0;
 }
 
+h4 {
+    font-size: 0.9em;
+    padding: 0.2em 1em;
+    margin: 0;
+}
+
 p {
+    font-size: 0.8em;
     padding: 0 0.4em;
     margin: 0;
 }
@@ -45,22 +46,22 @@ button {
 }
 
 main {
-    width: 40vw;
+    width: 90vw;
     height: 100vh;
     box-sizing: border-box;
-    padding: 16vh 0;
+    padding: 8vh 0;
     margin: 0 auto;
 }
 
 .section {
-    height: 60vh;
+    height: 72vh;
     border: black solid 2px;
     box-sizing: border-box;
     padding: 2em 0;
 }
 
 nav {
-    width: 40vw;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
 }
@@ -83,7 +84,7 @@ nav {
 }
 
 img {
-    padding: 0 1em;
+    padding: 0 0.4em;
 }
 
 .languageSelector {
@@ -105,14 +106,13 @@ select {
 }
 
 .admin {
-    padding: 1em 0;
-    display: flex;
-    justify-content: center;
+    padding: 1em 2em;
 }
 
 .admin-header {
-    width: 8vw;
-    border-right: black 2px solid;
+    width: 72vw;
+    border-bottom: black 2px solid;
+    margin-bottom: 1em;
     display: flex;
 }
 
@@ -121,7 +121,7 @@ select {
 }
 
 .admin-row {
-    width: 20vw;
+    width: 60vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -132,7 +132,7 @@ select {
 }
 
 #adminsection {
-    height: 20vh;
+    height: 46vh;
     overflow-y: scroll;
 }
 
@@ -141,7 +141,7 @@ select {
 }
 
 .navcontentbox {
-    width: 8vw;
+    width: 30vw;
     background-color: cadetblue;
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@ select {
 }
 
 .tr-head {
-    width: 16vw;
+    width: 36vw;
     border: blue solid 1px;
     border-radius: 0.6em;
     display: flex;
@@ -171,8 +171,8 @@ select {
 }
 
 .tr-td {
-    width: 16vw;
-    height: 8vw;
+    width: 36vw;
+    height: 24vh;
     background-color: gainsboro;
     display: flex;
     flex-direction: column;
