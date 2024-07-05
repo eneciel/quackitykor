@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link href="common.css" rel="stylesheet" media="(orientation: landscape)">
+        <link href="common.css" rel="stylesheet">
         <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -8,12 +8,14 @@
         <script>
             const langResource = {
                 ko : {
+                    nabi: 'Nabi',
+                    nacl: '엔에씨엘',
                     pronouns: '대명사',
                     pronounss: '대명사',
                     nabi_pronouns: 'She/Her | Ella/-a',
-                    eneciel_pronouns: 'They/Them',
-                    nativelang: '모국어',
-                    nativelangg: '모국어',
+                    eneciel_pronouns: 'They/Them | Elle/-e',
+                    native: '모국어',
+                    nativee: '모국어',
                     nabi_lang: '스페인어',
                     eneciel_lang: '한국어',
                     timezone: '표준시',
@@ -22,12 +24,14 @@
                     eneciel_time: 'KST'
                 },
                 en : {
+                    nabi: 'Nabi',
+                    nacl: 'Eneciel',
                     pronouns: 'Pronouns',
                     pronounss: 'Pronouns',
                     nabi_pronouns: 'She/Her',
                     eneciel_pronouns: 'They/Them',
-                    nativelang: 'Native Language',
-                    nativelangg: 'Native Language',
+                    native: 'Native Language',
+                    nativee: 'Native Language',
                     nabi_lang: 'Spanish',
                     eneciel_lang: 'Korean',
                     timezone: 'Timezone',
@@ -36,12 +40,14 @@
                     eneciel_time: 'KST'
                 },
                 es : {
+                    nabi: 'Nabi',
+                    nacl: 'Eneciel',
                     pronouns: 'Pronombres',
                     pronounss: 'Pronombres',
                     nabi_pronouns: 'Ella/-a',
                     eneciel_pronouns: 'Elle/-e',
-                    nativelang: 'Lengua materna',
-                    nativelangg: 'Lengua materna',
+                    native: 'Lengua materna',
+                    nativee: 'Lengua materna',
                     nabi_lang: 'Español',
                     eneciel_lang: 'Coreano',
                     timezone: 'Zona Horaria',
@@ -53,11 +59,11 @@
         </script>
 
         <main>
-            <div class="section">
+            <div class="sectioin">
                 <div class="sectionheader">
                     <h1>콰키티 한국어 번역기</h1>
                     <div class="languageSelector">
-                        <label for="languageSelector"><img src="source/icon/language.svg">Language:</label>
+                        <label for="languageSelector"><img src="source/icon/language.svg"></label>
                         <select id="languageSelector">
                             <option value="ko" selected>한국어</option>
                             <option value="en">English</option>
@@ -65,36 +71,36 @@
                         </select>
                     </div>
                 </div>
-                <div id="adminsection">
+                <div class="admincontainer">
                     <div class="admin">
-                        <div class="admin-header"><h3>Nabi</h3></div>
-                        <div class="admin-context">
-                            <div class="admin-row">
+                        <div class="admin-header"><h3 id="nabi"></h3></div>
+                        <div class="admin-body">
+                            <div class="row">
+                                <h4 id="native"></h4>
+                                <p id="nabi_lang"></p>
+                            </div>
+                            <div class="row">
                                 <h4 id="pronouns"></h4>
                                 <p id="nabi_pronouns"></p>
                             </div>
-                            <div class="admin-row">
-                                <h4 id="nativelang"></h4>
-                                <p id="nabi_lang"></p>
-                            </div>
-                            <div class="admin-row">
+                            <div class="row">
                                 <h4 id="timezone"></h4>
                                 <p id="nabi_time"></p>
                             </div>
                         </div>
                     </div>
                     <div class="admin">
-                        <div class="admin-header"><h3>Eneciel</h3></div>
-                        <div class="admin-context">
-                            <div class="admin-row">
+                        <div class="admin-header"><h3 id="nacl"></h3></div>
+                        <div class="admin-body">
+                            <div class="row">
+                                <h4 id="nativee"></h4>
+                                <p id="eneciel_lang"></p>
+                            </div>
+                            <div class="row">
                                 <h4 id="pronounss"></h4>
                                 <p id="eneciel_pronouns"></p>
                             </div>
-                            <div class="admin-row">
-                                <h4 id="nativelangg"></h4>
-                                <p id="eneciel_lang"></p>
-                            </div>
-                            <div class="admin-row">
+                            <div class="row">
                                 <h4 id="timezonee"></h4>
                                 <p id="eneciel_time"></p>
                             </div>

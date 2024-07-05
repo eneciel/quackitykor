@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link href="common.css" rel="stylesheet" media="(orientation: landscape)">
+        <link href="common.css" rel="stylesheet">
         <link href="mobile.css" rel="stylesheet" media="(orientation: portrait)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -8,40 +8,40 @@
         <script>
             const langResource = {
                 ko : {
-                    from: '영어 및 스페인어',
-                    startline1: '¡Hola patitos!',
+                    from: '영어 & 스페인어',
+                    startline1: '¡Hola gente!',
                     startline2: 'We are Quackity Korean Translator.',
-                    startline3: 'Mucho gusto.',
-                    startline4: 'Meet our team on this page!',
+                    startline3: 'Traducimos los contenidos de Quackity, del español y inglés al coreano.',
+                    startline4: 'If needed, we will also translate Korean to English and Spanish.',
                     to: '한국어',
-                    endline1: '안녕하세요 키티탐라 여러분!',
+                    endline1: '안녕하세요 여러분!',
                     endline2: '저희는 콰키티 한국어 번역기입니다.',
-                    endline3: '만나서 반가워요.',
-                    endline4: '이 페이지에서 저희 팀을 만나보세요!'
+                    endline3: '콰키티의 콘텐츠를 스페인어와 영어에서 한국어로 번역합니다.',
+                    endline4: '필요한 경우 한국어를 영어와 스페인어로 번역하기도 합니다.'
                 },
                 en : {
                     from: 'Korean',
-                    startline1: '안녕하세요 키티탐라 여러분!',
+                    startline1: '안녕하세요 여러분!',
                     startline2: '저희는 콰키티 한국어 번역기입니다.',
-                    startline3: '만나서 반가워요.',
-                    startline4: '이 페이지에서 저희 팀을 만나보세요!',
+                    startline3: '콰키티의 콘텐츠를 스페인어와 영어에서 한국어로 번역합니다.',
+                    startline4: '필요한 경우 한국어를 영어와 스페인어로 번역하기도 합니다.',
                     to: 'English',
-                    endline1: 'Hello ducklings!',
+                    endline1: 'Hello guys!',
                     endline2: 'We are Quackity Korean Translator.',
-                    endline3: 'Nice to meet you.',
-                    endline4: 'Meet our team on this page!'
+                    endline3: "We translate Quackity's content, from Spanish and English to Korean.",
+                    endline4: 'If needed, we will also translate Korean to English and Spanish.'
                 },
                 es : {
                     from: 'Coreano',
-                    startline1: '안녕하세요 키티탐라 여러분!',
+                    startline1: '안녕하세요 여러분!',
                     startline2: '저희는 콰키티 한국어 번역기입니다.',
-                    startline3: '만나서 반가워요.',
-                    startline4: '이 페이지에서 저희 팀을 만나보세요!',
+                    startline3: '콰키티의 콘텐츠를 스페인어와 영어에서 한국어로 번역합니다.',
+                    startline4: '필요한 경우 한국어를 영어와 스페인어로 번역하기도 합니다.',
                     to: 'Español',
-                    endline1: '¡Hola patitos!',
+                    endline1: '¡Hola gente!',
                     endline2: 'Somos el traductor coreano de Quackity.',
-                    endline3: 'Mucho gusto.',
-                    endline4: '¡Conoce a nuestro equipo en esta página!'
+                    endline3: 'Traducimos los contenidos de Quackity, del español y inglés al coreano.',
+                    endline4: 'Si es necesario, también traduciremos del coreano al inglés y al español.'
                 }
             }
         </script>
@@ -51,7 +51,7 @@
                 <div class="sectionheader">
                     <h1>콰키티 한국어 번역기</h1>
                     <div class="languageSelector">
-                        <label for="languageSelector"><img src="source/icon/language.svg">Language:</label>
+                        <label for="languageSelector"><img src="source/icon/language.svg"></label>
                         <select id="languageSelector">
                             <option value="ko" selected>한국어</option>
                             <option value="en">English</option>
@@ -60,24 +60,25 @@
                     </div>
                 </div>
                 <div class="translator">
-                    <div class="translator-row">
+                    <div class="translator-head">
                         <div class="tr-head">
                             <h4 id="from"></h4>
                         </div>
-                        <img src="source/icon/change.svg">
+                        <div class="tr-mid">
+                            <img src="source/icon/change.svg">
+                        </div>
                         <div class="tr-head">
                             <h4 id="to"></h4>
                         </div>
                     </div>
-                    <div class="translator-row">
-                        <div class="tr-td">
+                    <div class="translator-result">
+                        <div class="tr-td" id="index-tr-from">
                             <p id="startline1"></p>
                             <p id="startline2"></p>
                             <p id="startline3"></p>
                             <p id="startline4"></p>
                         </div>
-                        <img src="source/icon/space.svg">
-                        <div class="tr-td">
+                        <div class="tr-td" id="index-tr-to">
                             <p id="endline1"></p>
                             <p id="endline2"></p>
                             <p id="endline3"></p>
@@ -85,22 +86,24 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- <input type="button" value="night" id="change"> -->
             </div>
-            <nav>
-                <a href="#"><div class="navcontentbox">
-                    <img src="source/icon/home.svg">
-                    <h4>Home</h4>
-                </div></a>
-                <a href="admin.html"><div class="navcontentbox">
-                    <img src="source/icon/admin.svg">
-                    <h4>Admins</h4>
-                </div></a>
-                <a href="faq.html"><div class="navcontentbox">
-                    <img src="source/icon/question.svg">
-                    <h4>FAQ</h4>
-                </div></a>
-            </nav>
         </main>
+        <nav>
+            <a href="#"><div class="navcontentbox">
+                <img src="source/icon/home.svg">
+                <h4>Home</h4>
+            </div></a>
+            <a href="admin.html"><div class="navcontentbox">
+                <img src="source/icon/admin.svg">
+                <h4>Admins</h4>
+            </div></a>
+            <a href="faq.html"><div class="navcontentbox">
+                <img src="source/icon/question.svg">
+                <h4>FAQ</h4>
+            </div></a>
+        </nav>
 
         <script>
             window.addEventListener('load', function(){
@@ -121,6 +124,23 @@
                     }
                 }
             }
+
+            /* const change = document.querySelector('#change');
+            const body = document.querySelector('body');
+
+            function changeHandle () {
+                if (change.value === 'night') {
+                    body.classList.add('night');
+                    body.classList.remove('day');
+                    change.value = 'day';
+                } else {
+                    body.classList.remove('night');
+                    body.classList.add('day');
+                    change.value = 'night';
+                }
+            }
+
+            change.addEventListener("click", changeHandle); */
         </script>
     </body>
 </html>
