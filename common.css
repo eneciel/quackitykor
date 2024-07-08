@@ -86,7 +86,7 @@ img  {
     display: flex;
     justify-content: center;
     padding: 4px 12px;
-    margin: 0 auto;
+    margin: 24px auto;
 }
 
 main {
@@ -98,7 +98,8 @@ main {
 nav {
     width: 100%;
     background-color: var(--color-background);
-    padding: 2em 0;
+    box-shadow: 0 -4px 8px 0 var(--color-primary-opct);
+    padding: 16px 0;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -114,7 +115,7 @@ nav a div {
     background-color: var(--color-primary-opct);
     border-radius: 8px;
     padding: 8px 0 0;
-    margin: 0 8px;
+    margin: 0 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,7 +331,8 @@ select {
     align-items: center;
     border-radius: 999px;
     background-color: var(--color-primary);
-    padding: 4px 12px;
+    box-shadow: 0 0 8px 0 black;
+    padding: 4px 16px 4px 12px;
     margin: 4px;
 }
 
