@@ -17,7 +17,8 @@
                     endline1: '안녕하세요 여러분!',
                     endline2: '저희는 콰키티 한국어 번역기입니다.',
                     endline3: '콰키티의 콘텐츠를 스페인어와 영어에서 한국어로 번역합니다.',
-                    endline4: '필요한 경우 한국어를 영어와 스페인어로 번역하기도 합니다.'
+                    endline4: '필요한 경우 한국어를 영어와 스페인어로 번역하기도 합니다.',
+                    else: '기타'
                 },
                 en : {
                     from: 'Korean',
@@ -29,7 +30,8 @@
                     endline1: 'Hello guys!',
                     endline2: 'We are Quackity Korean Translator.',
                     endline3: "We translate Quackity's content, from Spanish and English to Korean.",
-                    endline4: 'If needed, we will also translate Korean to English and Spanish.'
+                    endline4: 'If needed, we will also translate Korean to English and Spanish.',
+                    else: 'Else'
                 },
                 es : {
                     from: 'Coreano',
@@ -41,7 +43,8 @@
                     endline1: '¡Hola gente!',
                     endline2: 'Somos el traductor coreano de Quackity.',
                     endline3: 'Traducimos los contenidos de Quackity, del español y inglés al coreano.',
-                    endline4: 'Si es necesario, también traduciremos del coreano al inglés y al español.'
+                    endline4: 'Si es necesario, también traduciremos del coreano al inglés y al español.',
+                    else: 'Extra'
                 }
             }
         </script>
@@ -53,7 +56,7 @@
                     <div class="languageSelector">
                         <label for="languageSelector"><img src="source/icon/language.svg"></label>
                         <select id="languageSelector">
-                            <option value="ko" selected>한국어</option>
+                            <option value="ko">한국어</option>
                             <option value="en">English</option>
                             <option value="es">Español</option>
                         </select>
@@ -92,16 +95,36 @@
                     <div class="row" id="links">
                         <a href="https://x.com/Quackity" target="_blank"><div class="link"><img src="source/icon/twitter.svg"><p>@Quackity</p></div></a>
                         <a href="https://x.com/quackity4k" target="_blank"><div class="link"><img src="source/icon/twitter.svg"><p>@quackity4k</p></div></a>
-                        <a href="https://x.com/ElAlexQuackity"><div class="link"><img src="source/icon/twitter.svg"><p>@ElAlexQuackity</p></div></a>
+                        <a href="https://x.com/ElAlexQuackity" target="_blank"><div class="link"><img src="source/icon/twitter.svg"><p>@ElAlexQuackity</p></div></a>
                     </div>
                     <div class="row" id="links">
-                        <a href="https:x.com/QuackityBell"><div class="link twittersub"><img src="source/icon/twitter.svg"><p>@QuackityBell</p></div></a>
-                        <div class="link twittersub"><img src="source/icon/twitter.svg"><p>@QuackityMerchh</p></div>
+                        <a href="https:x.com/QuackityBell" target="_blank"><div class="link sub"><img src="source/icon/twitter.svg"><p>@QuackityBell</p></div></a>
+                        <a href="https://x.com/QuackityMerchh" target="_blank"><div class="link sub"><img src="source/icon/twitter.svg"><p>@QuackityMerchh</p></div></a>
                     </div>
                     <h4>Twitch</h4>
                     <div class="row" id="links">
-                        <div class="link"><img src="source/icon/twitch.svg"><p>Quackity</p></div>
-                        <div class="link"><img src="source/icon/twitch.svg"><p>QuackityToo</p></div>
+                        <a href="https://twitch.tv/Quackity" target="_blank"><div class="link"><img src="source/icon/twitch.svg"><p>Quackity</p></div></a>
+                        <a href="https://twitch.tv/QuackityToo" target="_blank"><div class="link"><img src="source/icon/twitch.svg"><p>QuackityToo</p></div></a>
+                        <a href="https://twitch.tv/quackityfortnite" target="_blank"><div class="link sub"><img src="source/icon/twitch.svg"><p>quackityfortnite</p></div></a>
+                    </div>
+                    <h4>YouTube</h4>
+                    <div class="row" id="links">
+                        <a href="https://youtube.com/@Quackity" target="_blank"><div class="link"><img src="source/icon/youtube.svg"><p>Quackity</p></div></a>
+                        <a href="https://youtube.com/@QuackityTwoReal" target="_blank"><div class="link"><img src="source/icon/youtube.svg"><p>QuacktiyTwo</p></div></a>
+                        <a href="https://youtube.com/@ElAlexQuackity" target="_blank"><div class="link"><img src="source/icon/youtube.svg"><p>ElAlexQuackity</p></div></a>
+                        <a href="https://youtube.com/@QuackityVODS" target="_blank"><div class="link sub"><img src="source/icon/youtube.svg"><p>QuackityVODS</p></div></a>
+                        <a href="https://youtube.com/@ElAlexQuackityVODS" target="_blank"><div class="link sub"><img src="source/icon/youtube.svg"><p>ElAlexQuackityVODS</p></div></a>
+                    </div>
+                    <h4 id="else"></h4>
+                    <div class="row" id="links">
+                        <a href="https://instagram.com/quackity" target="_blank"><div class="link sub"><img src="source/icon/instagram.svg"><p>quackity</p></div></a>
+                        <a href="https://www.tiktok.com/@realquackity" target="_blank"><div class="link sub"><img src="source/icon/tiktok.svg"><p>@realquackity</p></div></a>
+                    </div>
+                    <h4>QSMP</h4>
+                    <div class="row" id="links">
+                        <a href="https://youtube.com/@QSMPInfo" target="_blank"><div class="link sub"><img src="source/icon/youtube.svg"><p>QSMP Info</p></div></a>
+                        <a href="https://x.com/QuackityStudios" target="_blank"><div class="link sub"><img src="source/icon/twitter.svg"><p>Studios</p></div></a>
+                        <a href="https://qsmp.shop/" target="_blank"><div class="link sub"><img src="source/icon/linkicon.svg"><p>Shop</p></div></a>
                     </div>
                 </div>
 
@@ -124,15 +147,17 @@
         </nav>
 
         <script>
-            window.addEventListener('load', function(){
-                document.getElementById('languageSelector').value = 'ko';
-                updatelanguage('ko');
+            window.addEventListener('load', function(getLang){
+                document.getElementById('languageSelector').value = locale;
+                updatelanguage(locale);
 
                 document.getElementById('languageSelector').addEventListener('change', function() {
                     const selectedLang = this.value;
                     updatelanguage(selectedLang);
                 });
             });
+
+            function getLang() {}
 
             function updatelanguage(lang) {
                 for (let key in langResource[lang]) {
