@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <link href="../common.css" rel="stylesheet">
+        <link href="../mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            const langResource = {
+                ko : {
+                    nabi: '나비',
+                    pronouns: 'She/Her | Ella/-a',
+                    native: '스페인어',
+                    timezone: 'EST',
+                    nation: '쿠바',
+                    twitter: '@nabiretti',
+                    korean: '한국어',
+                    english: '영어',
+                    spanish: '스페인어',
+                    about: '자기소개',
+                    about_context: '인생의 1/5이 콰키티로 이루어져 있음',
+                    lang: '언어',
+                    position: '업무',
+                    es_tr: '스페인어에서 번역',
+                    es_rev: '스페인어 검토',
+                    livetr: '실시간 번역',
+                    video: '영상 편집',
+                    design: '디자인 검수'
+                },
+                en : {
+                    nabi: 'Nabi',
+                    pronouns: 'She/Her',
+                    native: 'Spanish',
+                    timezone: 'EST',
+                    nation: 'Cuba',
+                    twitter: '@nabiretti',
+                    korean: 'Korean',
+                    english: 'English',
+                    spanish: 'Spanish',
+                    about: 'About myself',
+                    about_context: '1/5 of my life is made of Quackity',
+                    lang: 'Languages',
+                    position: 'Works',
+                    es_tr: 'Translation from Spanish',
+                    es_rev: 'Spanish Review',
+                    livetr: 'Live Translation',
+                    video: 'Video Edit',
+                    design: 'Design Revision'
+                },
+                es : {
+                    nabi: 'nabi',
+                    pronouns: 'Ella/-a',
+                    native: 'Español',
+                    timezone: 'EST',
+                    nation: 'Cuba',
+                    twitter: '@nabiretti',
+                    korean: 'Coreano',
+                    english: 'Inglés',
+                    spanish: 'Español',
+                    about: 'Sobre mí',
+                    about_context: '1/5 de mi vida está hecha de Quackity',
+                    lang: 'Lenguas',
+                    position: 'Trabajos',
+                    es_tr: 'Traducción de Español',
+                    es_rev: 'Revesión de Español',
+                    livetr: 'Traducción en Vivo',
+                    video: 'Subtítulo',
+                    design: 'Edición de Vídeo'
+                }
+            }
+        </script>
+
+        <main>
+            <div class="section">
+                <div class="sectionheader">
+                    <h1>콰키티 한국어 번역기</h1>
+                    <div class="languageSelector">
+                        <label for="languageSelector"><img src="../source/icon/language.svg"></label>
+                        <select id="languageSelector">
+                            <option value="ko" selected>한국어</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="breadcrumb">
+                    <a href="../admin.html" style="text-decoration: underline;"><p><- BACK</p></a>
+                </div>
+                <div class="adminprofile">
+                    <div class="profile-section center">
+                        <img class="profile-icon" src="../source/icon/nabi_chestnut.svg">
+                        <h2 id="nabi"></h2>
+                        <div class="row" id="tags">
+                            <div class="tag"><p>#</p><p id="native"></p></div>
+                            <div class="tag"><p>#</p><p id="timezone"></p></div>
+                            <div class="tag"><p>#</p><p id="nation"></p><img src="../source/icon/cuba.svg"></div>
+                            <div class="tag"><p>#</p><p id="pronouns"></p></div>
+                        </div>
+                        <div class="row">
+                            <a href="https://x.com/nabiretti" target="_blank"><div class="link"><img src="../source/icon/twitter.svg"><p id="twitter"></p></div></a>
+                        </div>
+                    </div>
+                    <div class="profile-section">
+                        <h3 id="about"></h3>
+                        <p id="about_context"></p>
+                    </div>
+                    <div class="profile-section">
+                        <h3 id="lang"></h3>
+                        <div class="lang-ratio">
+                            <div id="nabi-korean"></div>
+                            <div id="nabi-english"></div>
+                            <div id="nabi-spanish"></div>
+                        </div>
+                        <div class="lang-info">
+                            <div class="row">
+                                <div class="row"><img src="korean_icon.svg"><p id="korean"></p></div>
+                                <div class="row"><img src="english_icon.svg"><p id="english"></p></div>
+                                <div class="row"><img src="spanish_icon.svg"><p id="spanish"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-section">
+                        <h3 id="position"></h3>
+                        <div class="row" id="works">
+                            <div class="tag"><p id="es_tr"></p></div>
+                            <div class="tag"><p id="es_rev"></p></div>
+                            <div class="tag"><p id="livetr"></p></div>
+                            <div class="tag"><p id="video"></p></div>
+                            <div class="tag"><p id="design"></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            window.addEventListener('load', function(){
+                document.getElementById('languageSelector').value = 'ko';
+                updatelanguage('ko');
+
+                document.getElementById('languageSelector').addEventListener('change', function() {
+                    const selectedLang = this.value;
+                    updatelanguage(selectedLang);
+                });
+            });
+
+            function updatelanguage(lang) {
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang] [key];
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

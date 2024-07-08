@@ -34,6 +34,9 @@
 html, body {
     --color-primary: rgb(70, 160, 170);
     --color-primary-opct: rgba(70, 160, 170, 0.1);
+    --color-korean: rgb(150, 70, 255);
+    --color-english: rgb(255, 10, 55);
+    --color-spanish: rgb(255, 175, 0);
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: 'pretendard';
@@ -44,6 +47,16 @@ html, body {
 h1 {
     width: fit-content;
     padding: 1em 0 0.5em;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 8px 0;
+}
+
+h3 {
+    font-weight: 700;
     margin: 0;
 }
 
@@ -59,7 +72,6 @@ a {
 
 img  {
     width: 24px;
-    border-radius: 999px;
     padding: 4px;
 }
 
@@ -91,10 +103,19 @@ nav a div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+nav a div:hover {
+    bottom: 8px;
+    transition: all 1s ease-in-out;
 }
 
 .section {
-    width: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sectionheader {
@@ -125,6 +146,7 @@ select {
 }
 
 .translator {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -175,13 +197,176 @@ select {
     color: var(--color-primary);
 }
 
-.row {
+.row-fill {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.row h4, .row p {
+.row-fill h4, .row-fill p {
     padding: 0;
     margin: 8px 0;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.admin {
+    width: 300px;
+    border-radius: 12px;
+    padding: 12px 24px;
+}
+
+.admin:hover {
+    background-color: var(--color-primary-opct);
+    cursor: pointer;
+}
+
+.admin-header {
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb {
+    width: 100%;
+}
+
+.adminprofile {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.profile-section {
+    width: 100%;
+    padding: 12px 0;
+    margin: 0 0 24px;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-text);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#tags {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#tags img {
+    width: 0.8em;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background-color: var(--color-primary-opct);
+    padding: 4px 12px;
+    margin: 4px;
+}
+
+.tag p {
+    font-size: 0.8em;
+    text-wrap: nowrap;
+    margin: 0;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    padding: 4px 12px;
+    margin: 4px;
+}
+
+.link img {
+    width: 1em;
+}
+
+.link p {
+    text-wrap: nowrap;
+    margin: 0;
+}
+
+#about_context {
+    padding: 0 4px;
+}
+
+.lang-ratio {
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+}
+
+.lang-ratio div {
+    height: 1em;
+}
+
+#eneciel-korean {
+    background-color: var(--color-korean);
+    flex: 5;
+}
+
+#eneciel-english {
+    background-color: var(--color-english);
+    flex: 4;
+}
+
+#eneciel-spanish {
+    background-color: var(--color-spanish);
+    flex: 1;
+}
+
+#nabi-korean {
+    background-color: var(--color-korean);
+    flex: 2;
+}
+
+#nabi-english {
+    background-color: var(--color-english);
+    flex: 4;
+}
+
+#nabi-spanish {
+    background-color: var(--color-spanish);
+    flex: 4;
+}
+
+.lang-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4px 0;
+}
+
+.lang-info img {
+    width: 16px;
+}
+
+.lang-info div div {
+    padding: 0 12px;
+}
+
+.lang-info div div p {
+    margin: 0;
+}
+
+#works {
+    display: flex;
+    flex-wrap: wrap;
 }

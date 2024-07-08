@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <link href="../common.css" rel="stylesheet">
+        <link href="../mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            const langResource = {
+                ko : {
+                    nacl: '엔에씨엘',
+                    pronouns: 'They/Them | Elle/-e',
+                    native: '한국어',
+                    timezone: 'KST',
+                    nation: '대한민국',
+                    twitter: '@NaCl_HQ',
+                    korean: '한국어',
+                    english: '영어',
+                    spanish: '스페인어',
+                    about: '자기소개',
+                    about_context: '인생의 1/5이 콰키티로 이루어져 있음',
+                    lang: '언어',
+                    position: '업무',
+                    kr_tr: '한국어로 번역',
+                    kr_rev: '한국어 검토',
+                    livetr: '실시간 번역',
+                    srt: '자막',
+                    webdev: '웹 개발'
+                },
+                en : {
+                    nacl: 'Eneciel',
+                    pronouns: 'They/Them',
+                    native: 'Korean',
+                    timezone: 'KST',
+                    nation: 'Korea',
+                    twitter: '@NaCl_HQ',
+                    korean: 'Korean',
+                    english: 'English',
+                    spanish: 'Spanish',
+                    about: 'About myself',
+                    about_context: '1/5 of my life is made of Quackity',
+                    lang: 'Languages',
+                    position: 'Works',
+                    kr_tr: 'Translation to Korean',
+                    kr_rev: 'Korean Review',
+                    livetr: 'Live Translation',
+                    srt: 'Subtitle',
+                    webdev: 'Web Developer'
+                },
+                es : {
+                    nacl: 'Eneciel',
+                    pronouns: 'Elle/-e',
+                    native: 'Coreano',
+                    timezone: 'KST',
+                    nation: 'Corea',
+                    twitter: '@NaCl_HQ',
+                    korean: 'Coreano',
+                    english: 'Inglés',
+                    spanish: 'Español',
+                    about: 'Sobre mí',
+                    about_context: '1/5 de mi vida está hecha de Quackity',
+                    lang: 'Lenguas',
+                    position: 'Trabajos',
+                    kr_tr: 'Traducción a Coreano',
+                    kr_rev: 'Revesión de Coreano',
+                    livetr: 'Traducción en Vivo',
+                    srt: 'Subtítulo',
+                    webdev: 'Desarrollador Web'
+                }
+            }
+        </script>
+
+        <main>
+            <div class="section">
+                <div class="sectionheader">
+                    <h1>콰키티 한국어 번역기</h1>
+                    <div class="languageSelector">
+                        <label for="languageSelector"><img src="../source/icon/language.svg"></label>
+                        <select id="languageSelector">
+                            <option value="ko" selected>한국어</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="breadcrumb">
+                    <a href="../admin.html" style="text-decoration: underline;"><p><- BACK</p></a>
+                </div>
+                <div class="adminprofile">
+                    <div class="profile-section center">
+                        <img class="profile-icon" src="../source/icon/eneciel_alien.svg">
+                        <h2 id="nacl"></h2>
+                        <div class="row" id="tags">
+                            <div class="tag"><p>#</p><p id="native"></p></div>
+                            <div class="tag"><p>#</p><p id="timezone"></p></div>
+                            <div class="tag"><p>#</p><p id="nation"></p><img src="../source/icon/korea.svg"></div>
+                            <div class="tag"><p>#</p><p id="pronouns"></p></div>
+                        </div>
+                        <div class="row">
+                            <div class="link"><img src="../source/icon/twitter.svg"><p id="twitter"></p></div>
+                        </div>
+                    </div>
+                    <div class="profile-section">
+                        <h3 id="about"></h3>
+                        <p id="about_context"></p>
+                    </div>
+                    <div class="profile-section">
+                        <h3 id="lang"></h3>
+                        <div class="lang-ratio">
+                            <div id="eneciel-korean"></div>
+                            <div id="eneciel-english"></div>
+                            <div id="eneciel-spanish"></div>
+                        </div>
+                        <div class="lang-info">
+                            <div class="row">
+                                <div class="row"><img src="korean_icon.svg"><p id="korean"></p></div>
+                                <div class="row"><img src="english_icon.svg"><p id="english"></p></div>
+                                <div class="row"><img src="spanish_icon.svg"><p id="spanish"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-section">
+                        <h3 id="position"></h3>
+                        <div class="row" id="works">
+                            <div class="tag"><p id="kr_tr"></p></div>
+                            <div class="tag"><p id="kr_rev"></p></div>
+                            <div class="tag"><p id="livetr"></p></div>
+                            <div class="tag"><p id="srt"></p></div>
+                            <div class="tag"><p id="webdev"></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            window.addEventListener('load', function(){
+                document.getElementById('languageSelector').value = 'ko';
+                updatelanguage('ko');
+
+                document.getElementById('languageSelector').addEventListener('change', function() {
+                    const selectedLang = this.value;
+                    updatelanguage(selectedLang);
+                });
+            });
+
+            function updatelanguage(lang) {
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang] [key];
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
