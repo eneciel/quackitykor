@@ -23,12 +23,20 @@ nav h4 {
     padding: 0;
 }
 
+.translator-result {
+    margin: 8px 0;
+}
+
 .tr-td {
     width: 100%;
-    padding: 0 16px;
-    margin: 0.5em 0;
+    padding: 8px 16px;
+    margin: 4px 0;
 }
 
 #tags {
+    width: 100%;
+}
+
+#links {
     width: 100%;
 }
