@@ -147,17 +147,15 @@
         </nav>
 
         <script>
-            window.addEventListener('load', function(getLang){
-                document.getElementById('languageSelector').value = locale;
-                updatelanguage(locale);
+            window.addEventListener('load', function(){
+                document.getElementById('languageSelector').value = 'ko';
+                updatelanguage('ko');
 
                 document.getElementById('languageSelector').addEventListener('change', function() {
                     const selectedLang = this.value;
                     updatelanguage(selectedLang);
                 });
             });
-
-            function getLang() {}
 
             function updatelanguage(lang) {
                 for (let key in langResource[lang]) {
