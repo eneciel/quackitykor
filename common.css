@@ -19,7 +19,7 @@
 
 html, body {
     --color-text: white;
-    --color-text-weak: #eee;
+    --color-text-weak: #e0e0e0;
     --color-background: #1e1e1e;
     --color-primary: rgb(70, 160, 170);
     --color-primary-opct: rgba(70, 160, 170, 0.1);
@@ -62,6 +62,13 @@ h5 {
     margin: 0;
 }
 
+h6 {
+    color: var(--color-text-weak);
+    font-weight: 400;
+    padding: 0;
+    margin: 1em 0;
+}
+
 a {
     color: var(--color-text);
     text-decoration: none;
@@ -86,7 +93,7 @@ img  {
     display: flex;
     justify-content: center;
     padding: 4px 12px;
-    margin: 0 auto;
+    margin: 24px auto;
 }
 
 main {
@@ -95,10 +102,24 @@ main {
     padding: 0 24px;
 }
 
+footer {
+    padding: 4em 0 8em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 100px;
+}
+
 nav {
     width: 100%;
     background-color: var(--color-background);
-    padding: 2em 0;
+    box-shadow: 0 -4px 8px 0 var(--color-primary-opct);
+    padding: 16px 0;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -114,7 +135,7 @@ nav a div {
     background-color: var(--color-primary-opct);
     border-radius: 8px;
     padding: 8px 0 0;
-    margin: 0 8px;
+    margin: 0 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,7 +160,7 @@ nav a div:hover {
 
 .section {
     width: 50%;
-    padding-bottom: 200px;
+    padding-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,8 +264,7 @@ select {
 
 .quackitys {
     width: 100%;
-    padding: 12px 0;
-    margin: 24px 0;
+    margin-top: 48px;
 }
 
 .admin {
@@ -330,7 +350,8 @@ select {
     align-items: center;
     border-radius: 999px;
     background-color: var(--color-primary);
-    padding: 4px 12px;
+    box-shadow: 0 0 8px 0 black;
+    padding: 4px 16px 4px 12px;
     margin: 4px;
 }
 
