@@ -21,6 +21,7 @@ html, body {
     --color-text: white;
     --color-text-weak: #e0e0e0;
     --color-background: #1e1e1e;
+    --color-dark-weak: #2c2c2c;
     --color-primary: rgb(70, 160, 170);
     --color-primary-opct: rgba(70, 160, 170, 0.1);
     --color-korean: rgb(150, 70, 255);
