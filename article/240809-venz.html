@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>@quackitykor</title>
+        <link rel="icon" href="../source/logo.png">
+        
+        <link href="../common.css" rel="stylesheet">
+        <link href="../mobile.css" rel="stylesheet" media="(orientation: portrait)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            const langResource = {
+                ko : {
+                    title: '베네수엘라에서 일어나고 있는 일에 대해 전해드립니다.',
+                    date: '2024년 8월 9일',
+                    p1: '안녕하세요, 좋은 하루 보내고 계신가요? 여러분께 지금 베네수엘라에서 일어나고 있는 일에 대해 전해드릴 필요성을 느껴, 본래 정체성을 내려두고 짧은 글을 작성하게 되었습니다.',
+                    p2: '지금 베네수엘라에서는 독재를 행사하고자 하는 현 Maduro 대통령 정권에 대항해 발언하고 행동하는 사람들을 향한 입막음과 무고한 구속이 자행되고 있습니다. 현 베네수엘라 정권은 검열과 협박을 통해 위법 사실을 숨기고 처벌을 회피하고 있으며, 이는 명백한 독재입니다.',
+                    p3: '그리고 오늘에 와서는, 사람들에게 메세지 및 영상 형태의 모든 앱 삭제를 강요하고 있습니다. 이런 상황 속에 이렇게 대항하는 이들을 지지할 수 있는 방법은 바로 사람들이 SNS에 공유하는 영상, 사진을 퍼뜨려 목소리를 높여 주는 것입니다. 관련된 주제에 대해 이야기하는 사람이 보인다면 무시하지 말고 목소리에 귀 기울여주시길 바랍니다. 이는 결코 가볍게 넘길 일이 아니며, 저희의 크리에이터도 최근 언급한 바 있는 내용입니다.',
+                    p4: '독재의 역사를 가진 대한민국 국민으로서, 또 글로벌 시대에 함께하는 팬덤으로서, 함께 옳은 방향으로 나아가주셨으면 합니다.',
+                    p5: '읽어주셔서 감사합니다.',
+                    post: '트윗 바로가기'
+                },
+                en : {
+                    title: "What's happening in Venezuela",
+                    date: 'August 9th, 2024',
+                    p1: "Hello, I hope you are having a good day. We'd like to share a short commentary leaving our natural works behind, to let you be aware of what's happening in Venezuela.",
+                    p2: "In Venezuela, people are being silenced and imprisoned for speaking out against the regime of the current president Maduro who wants to start a dictatorship. The current regime of Venezuela is hiding its crimes by seeking impunity by censoring and threatening, which is an obvious dictatorship.",
+                    p3: "And as of today, people are forced to delete all types of messaging/video applications. The way we can support those who still speaks out in this situation is by raising their voice, is to spreading videos and images they shared on social networks. We encourage you if you see people talking about it to not dismiss them, and listen carefully. We must not take it lightly, and our creator has also mentioned it recently.",
+                    p4: "As a person of Korea which is a country with a history of dictatorship, as a person of a community going along with the global generation, we want you to join the move towards the right direction.",
+                    p5: "Thank you.",
+                    post: 'See tweets'
+                },
+                es : {
+                    title: 'Qué pasa en Venezuela',
+                    date: '9 de agosto de 2024',
+                    p1: 'Hola, espero que estés teniendo un buen día. Nos gustaría compartir un breve comentario dejando atrás nuestras obras naturales, para que estés al tanto de lo que está pasando en Venezuela.',
+                    p2: 'En Venezuela, la gente está siendo silenciada y encarcelada por hablar en contra del régimen del actual presidente Maduro, que quiere iniciar una dictadura. El actual régimen de Venezuela oculta sus crímenes buscando impunidad censurando y amenazando, lo cual es una dictadura evidente.',
+                    p3: 'Y a partir de hoy, las personas se ven obligadas a eliminar todo tipo de aplicaciones de mensajería/vídeo. La forma en que podemos apoyar a quienes aún se pronuncian en esta situación es alzando la voz, es difundiendo videos e imágenes que compartieron en las redes sociales. Le recomendamos que, si ve personas hablando de ello, no los descarte y escuche con atención. No debemos tomárnoslo a la ligera, y nuestro creador también lo ha mencionado recientemente.',
+                    p4: 'Como persona de Corea, un país con una historia de dictadura, como persona de una comunidad que acompaña a la generación global, queremos que se unan al movimiento hacia la dirección correcta.',
+                    p5: 'Gracias.',
+                    post: 'Ver tweets',
+                }
+            }
+        </script>
+        <main>
+            <div class="section">
+                <div class="sectionheader">
+                    <h1>콰키티 한국어 번역기</h1>
+                    <div class="languageSelector">
+                        <label for="languageSelector"><img src="../source/icon/language.svg"></label>
+                        <select id="languageSelector">
+                            <option value="ko" selected>한국어</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="breadcrumb">
+                    <a href="../index.html" style="text-decoration: underline;"><p><- BACK</p></a>
+                </div>
+                <div class="article">
+                    <div class="article_header">
+                        <h4>· Article</h4>
+                        <h1 id="title"></h1>
+                        <h5 id="date"></h5>
+                    </div>
+                    <p id="p1"></p>
+                    <p id="p2"></p>
+                    <p id="p3"></p>
+                    <p id="p4"></p>
+                    <p id="p5"></p>
+                </div>
+                <div class="link"><img src="../source/icon/twitter.svg"><p id="post"></p></div>
+            </div>
+        </main>
+        
+        <footer>
+            <img src="../source/logo.png">
+            <h6>@quackitykor</h6>
+        </footer>
+
+        <!-- <nav>
+            <a href="index.html"><div class="navcontentbox">
+                <img src="../source/icon/home.svg">
+                <h4>Home</h4>
+            </div></a>
+            <a href="admin.html"><div class="navcontentbox">
+                <img src="../source/icon/admin.svg">
+                <h4>Admins</h4>
+            </div></a>
+            <a href="faq.html"><div class="navcontentbox current">
+                <img src="../source/icon/question.svg">
+                <h4>FAQ</h4>
+            </div></a>
+        </nav> -->
+
+        <script>
+            window.addEventListener('load', function(){
+                document.getElementById('languageSelector').value = 'ko';
+                updatelanguage('ko');
+
+                document.getElementById('languageSelector').addEventListener('change', function() {
+                    const selectedLang = this.value;
+                    updatelanguage(selectedLang);
+                });
+            });
+
+            function updatelanguage(lang) {
+                for (let key in langResource[lang]) {
+                    const element = document.getElementById(key);
+                    if (element) {
+                        element.textContent = langResource[lang] [key];
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
